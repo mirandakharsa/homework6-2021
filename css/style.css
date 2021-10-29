@@ -11,7 +11,6 @@ header{
     z-index: 100;
     top: 0;
     position: sticky;
-
 }
 
 .nav_links{
@@ -42,19 +41,15 @@ header{
 }
 
 .card{
-    flex-basis: 450px;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
-
+    flex-basis: 450px
 }
 
 .gallery{
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-}
+  }
 
 #image1 {
     border: 10px solid #50C7C7;
