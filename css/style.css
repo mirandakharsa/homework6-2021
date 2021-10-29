@@ -8,19 +8,23 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
+    top: 0;
+    position: sticky;
 
 }
 
-.nav_item a{
+.nav_links{
+    display: flex;
     flex-direction: column;
-    align-self: center;
 }
 
-.nav_item a:visited{
+.nav_links a:visited{
     color: blue;
 }
 
-.card h3{
+.card header{
+    z-index: 10;
     background-color: #288088;
     border: 2px solid #45aDAD;
     padding-top: 20px;
@@ -34,7 +38,7 @@ header{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 
 }
 
@@ -82,7 +86,7 @@ header{
     width: 300px; 
 }
 
-@keyframes logo{
+@keyframes {
     from {width: 50px; opacity: 0;}
     to {width: 425px; opacity: 1;}
     
@@ -96,25 +100,37 @@ header{
 
 @media screen and (min-width: 850px){
     header{
+        display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        /* flex-direction: row;
         justify-content: space-between;
         position: fixed;
         top: 0px;
         width: 100%;
-        margin: 0px auto;
+        margin: 0px auto; */
     }
-    nav{
+    .nav_links{
+        display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     .card{
         flex-basis: 250px;
     }
 
+    .pricing{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (prefers-reducded-motion:reduce){
-    header{
+    #logo{
         animation: none;
         /* animation-name: dissolve; */
     }
@@ -122,7 +138,40 @@ header{
 
 @media print{
     body{
-        background: none;
-        
+        background-image: none;
     }
+
+    nav{
+        width: 100%;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .pricing{
+        display: flex;
+        align-items: flex-end;
+        flex-flow: row;
+        flex-wrap:nowrap;
+    }
+    .card{
+        flex-basis: 250px;
+        border: 2px solid #45addd;
+    }
+    .gallery{
+        display: none;
+    }
+
+    .pricing li:nth-child(even):after{
+        content: "\1F44D";
+    }
+
+    .pricing li:nth-child(odd):before{
+        content: "\1F44D";
+    }
+
 }
