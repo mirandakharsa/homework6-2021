@@ -1,0 +1,128 @@
+body {
+    font-family: 'Alegreya Sans SC', serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nav_item a{
+    flex-direction: column;
+    align-self: center;
+}
+
+.nav_item a:visited{
+    color: blue;
+}
+
+.card h3{
+    background-color: #288088;
+    border: 2px solid #45aDAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    align-self: stretch;
+    }
+
+.pricing{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.card{
+    flex-basis: 450px;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+
+}
+
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#image1 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px; 
+}
+#image2 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px; 
+}
+
+#image3 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px; 
+}
+
+#image4 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px; 
+}
+
+#image5 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px; 
+}
+
+@keyframes logo{
+    from {width: 50px; opacity: 0;}
+    to {width: 425px; opacity: 1;}
+    
+}
+
+#logo{
+    animation-name: logo;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@media screen and (min-width: 850px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        margin: 0px auto;
+    }
+    nav{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .card{
+        flex-basis: 250px;
+    }
+
+}
+
+@media screen and (prefers-reducded-motion:reduce){
+    header{
+        animation: none;
+        /* animation-name: dissolve; */
+    }
+}
+
+@media print{
+    body{
+        background: none;
+        
+    }
+}
