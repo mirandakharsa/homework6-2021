@@ -20,7 +20,7 @@ header{
 }
 
 .nav_links a:visited{
-    color: blue;
+    color:#50C7C7;
 }
 
 .card header{
@@ -31,7 +31,6 @@ header{
     padding-bottom: 20px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    align-self: stretch;
     }
 
 .pricing{
@@ -103,7 +102,8 @@ header{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 100%;
+        position: sticky;
+        top:0;
         /* flex-direction: row;
         justify-content: space-between;
         position: fixed;
