@@ -161,6 +161,10 @@ header{
         display: none;
     }
 
+    #gallery{
+        display: none;
+    }
+
     .pricing li:nth-child(even):after{
         content: "\1F44D";
     }
